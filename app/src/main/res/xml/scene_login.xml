@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@id/end"
+        motion:duration="800"
+        motion:autoTransition="animateToEnd" />
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/etEmail" android:alpha="0" />
+        <Constraint android:id="@id/etPwd" android:alpha="0" />
+        <Constraint android:id="@id/btnLogin" android:alpha="0" />
+        <Constraint android:id="@id/tvReg" android:alpha="0" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/etEmail" android:alpha="1" />
+        <Constraint android:id="@id/etPwd" android:alpha="1" />
+        <Constraint android:id="@id/btnLogin" android:alpha="1" />
+        <Constraint android:id="@id/tvReg" android:alpha="1" />
+    </ConstraintSet>
+
+</MotionScene>

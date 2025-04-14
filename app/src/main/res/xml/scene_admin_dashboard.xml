@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:app="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Start State: all views are invisible (alpha 0) -->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/tvAdminTitle"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint android:id="@id/btnCreateCourse"
+            android:alpha="0"
+            app:layout_constraintTop_toBottomOf="@id/tvAdminTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint android:id="@id/btnAnalytics"
+            android:alpha="0"
+            app:layout_constraintTop_toBottomOf="@id/btnCreateCourse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+
+    <!-- End State: views are fully visible -->
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/tvAdminTitle"
+            android:alpha="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint android:id="@id/btnCreateCourse"
+            android:alpha="1"
+            app:layout_constraintTop_toBottomOf="@id/tvAdminTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint android:id="@id/btnAnalytics"
+            android:alpha="1"
+            app:layout_constraintTop_toBottomOf="@id/btnCreateCourse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+
+    <!-- Transition: Auto-run from 'start' to 'end' over 1000ms -->
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@id/end"
+        motion:duration="1000">
+        <!-- Optionally, add triggers for repeated animations or OnClick events -->
+    </Transition>
+</MotionScene>

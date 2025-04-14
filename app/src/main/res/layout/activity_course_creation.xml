@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etCourseTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Course Title"
+            android:padding="12dp"
+            android:backgroundTint="@color/brand_light_purple" />
+
+        <Spinner
+            android:id="@+id/spContentType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etCourseSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Course Summary"
+            android:minLines="2"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/brand_light_blue" />
+
+        <EditText
+            android:id="@+id/etCourseDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Course Duration"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/brand_light_green" />
+
+        <EditText
+            android:id="@+id/etInviteEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Invite User Email"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/brand_light_orange" />
+
+        <!-- Invite User -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnInviteUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invite"
+            android:layout_marginTop="12dp"
+            android:textColor="@android:color/white"
+            app:cornerRadius="16dp"
+            app:rippleColor="@color/ripple_purple"
+            android:backgroundTint="@color/brand_purple"
+            app:elevation="4dp" />
+
+        <!-- Create Course -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Course"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white"
+            app:cornerRadius="16dp"
+            app:rippleColor="@color/ripple_blue"
+            android:backgroundTint="@color/brand_blue"
+            app:elevation="6dp" />
+
+        <!-- Manage Content -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnManageContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage Content"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white"
+            app:cornerRadius="16dp"
+            app:rippleColor="@color/ripple_green"
+            android:backgroundTint="@color/brand_green"
+            app:elevation="6dp" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnalytics"
+            android:layout_width="wrap_content"
+            android:layout_height="360dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardAnalytics"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/course_creation" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>
